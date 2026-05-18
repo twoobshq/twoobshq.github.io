@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TWOOBS Weekly Report &mdash; Week ending 17 May 2026</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+         background: #F0E0C4; color: #000; padding: 32px 24px; max-width: 1380px; }
+  .logo { width: 100px; height: auto; margin-bottom: 8px; display: block; }
+  .wordmark { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+              margin-bottom: 4px; display: none; }
+  .report-title  { font-size: 26px; font-weight: 700; margin-bottom: 4px; }
+  .report-period { font-size: 13px; color: #666; margin-bottom: 32px; }
+  .page-wrapper { display: grid; grid-template-columns: 1fr 480px; gap: 20px; align-items: start; }
+  .main-content { min-width: 0; }
+  .analyst-sidebar { position: sticky; top: 24px; }
+  .section { background: #fff; border-radius: 8px; padding: 24px; margin-bottom: 16px; overflow-x: auto; }
+  .section-title { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+                   opacity: 0.5; margin-bottom: 16px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  thead th { font-size: 10px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase;
+             color: #999; text-align: right; padding: 0 10px 10px 10px; border-bottom: 1px solid #eee;
+             white-space: nowrap; }
+  thead th:first-child { text-align: left; min-width: 190px; }
+  tbody td { padding: 9px 10px; text-align: right; border-bottom: 1px solid rgba(0,0,0,0.04);
+             white-space: nowrap; font-variant-numeric: tabular-nums; }
+  tbody td:first-child { text-align: left; color: #333; font-size: 13px; }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:hover { background: rgba(0,0,0,0.015); }
+  .sales-row td { font-weight: 700; background: rgba(217,227,0,0.15); }
+  .pos  { color: #007836; font-weight: 600; }
+  .neg  { color: #FF2E8B; font-weight: 600; }
+  .neut { color: #888; }
+  .manual { color: #bbb; font-style: italic; font-size: 12px; }
+  .cover-low { color: #FF2E8B; font-weight: 700; }
+  .cover-mid { color: #FF8040; font-weight: 700; }
+  .cover-ok  { color: #007836; font-weight: 600; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .subsection-label { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+                      color: #aaa; margin-bottom: 12px; }
+  .legend { display: flex; gap: 16px; margin-top: 14px; padding-top: 12px; border-top: 1px solid #eee; }
+  .legend-item { font-size: 11px; display: flex; align-items: center; gap: 5px; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+  .analyst-persona { margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #eee; }
+  .analyst-persona:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .persona-name { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+                  color: #888; margin-bottom: 10px; }
+  .analyst-subhead { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em;
+                     color: #bbb; margin: 10px 0 5px; }
+  .analyst-item { font-size: 12px; line-height: 1.55; margin-bottom: 4px; }
+  .analyst-action { font-size: 12px; font-weight: 600; line-height: 1.5; margin-top: 10px; padding: 8px 10px;
+                    background: rgba(217,227,0,0.2); border-radius: 4px; }
+  @media (max-width: 900px) {
+    .page-wrapper { grid-template-columns: 1fr; }
+    .analyst-sidebar { position: static; }
+    .two-col { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAGQCAYAAACAvzbMAAAAtGVYSWZJSSoACAAAAAYAEgEDAAEAAAABAAAAGgEFAAEAAABWAAAAGwEFAAEAAABeAAAAKAEDAAEAAAACAAAAEwIDAAEAAAABAAAAaYcEAAEAAABmAAAAAAAAAGAAAAABAAAAYAAAAAEAAAAGAACQBwAEAAAAMDIxMAGRBwAEAAAAAQIDAACgBwAEAAAAMDEwMAGgAwABAAAA//8AAAKgBAABAAAAkAEAAAOgBAABAAAAkAEAAAAAAAA1qXZBAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAFSWlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSfvu78nIGlkPSdXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQnPz4KPHg6eG1wbWV0YSB4bWxuczp4PSdhZG9iZTpuczptZXRhLyc+CjxyZGY6UkRGIHhtbG5zOnJkZj0naHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyc+CgogPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9JycKICB4bWxuczpBdHRyaWI9J2h0dHA6Ly9ucy5hdHRyaWJ1dGlvbi5jb20vYWRzLzEuMC8nPgogIDxBdHRyaWI6QWRzPgogICA8cmRmOlNlcT4KICAgIDxyZGY6bGkgcmRmOnBhcnNlVHlwZT0nUmVzb3VyY2UnPgogICAgIDxBdHRyaWI6Q3JlYXRlZD4yMDI2LTA1LTA0PC9BdHRyaWI6Q3JlYXRlZD4KICAgICA8QXR0cmliOkRhdGE+eyZxdW90O2RvYyZxdW90OzomcXVvdDtEQUU1OWdzaUt3YyZxdW90OywmcXVvdDt1c2VyJnF1b3Q7OiZxdW90O1VBRDhyQzV6TmIwJnF1b3Q7LCZxdW90O2JyYW5kJnF1b3Q7OiZxdW90O0JBRDhyTnZ2WFhnJnF1b3Q7fTwvQXR0cmliOkRhdGE+CiAgICAgPEF0dHJpYjpFeHRJZD42Mjc4OTcwMS1lOTNjLTQxMmQtYjFkMi04MGU2MmI2OTFiNzE8L0F0dHJpYjpFeHRJZD4KICAgICA8QXR0cmliOkZiSWQ+NTI1MjY1OTE0MTc5NTgwPC9BdHRyaWI6RmJJZD4KICAgICA8QXR0cmliOlRvdWNoVHlwZT4yPC9BdHRyaWI6VG91Y2hUeXBlPgogICAgPC9yZGY6bGk+CiAgIDwvcmRmOlNlcT4KICA8L0F0dHJpYjpBZHM+CiA8L3JkZjpEZXNjcmlwdGlvbj4KCiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0nJwogIHhtbG5zOmRjPSdodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyc+CiAgPGRjOnRpdGxlPgogICA8cmRmOkFsdD4KICAgIDxyZGY6bGkgeG1sOmxhbmc9J3gtZGVmYXVsdCc+NDAwIHggNDAwIFRXT09CUyBMb2dvIC0gMTwvcmRmOmxpPgogICA8L3JkZjpBbHQ+CiAgPC9kYzp0aXRsZT4KIDwvcmRmOkRlc2NyaXB0aW9uPgoKIDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PScnCiAgeG1sbnM6cGRmPSdodHRwOi8vbnMuYWRvYmUuY29tL3BkZi8xLjMvJz4KICA8cGRmOkF1dGhvcj5Ib3cgVHdvIExpdmU8L3BkZjpBdXRob3I+CiA8L3JkZjpEZXNjcmlwdGlvbj4KCiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0nJwogIHhtbG5zOnhtcD0naHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyc+CiAgPHhtcDpDcmVhdG9yVG9vbD5DYW52YSBkb2M9REFFNTlnc2lLd2MgdXNlcj1VQUQ4ckM1ek5iMCBicmFuZD1CQUQ4ck52dlhYZzwveG1wOkNyZWF0b3JUb29sPgogPC9yZGY6RGVzY3JpcHRpb24+CjwvcmRmOlJERj4KPC94OnhtcG1ldGE+Cjw/eHBhY2tldCBlbmQ9J3InPz7yZqw7AAAgAElEQVR4nO3dCdgtR13n8QqEYBTEHTcICLiMKIo6gEJuMAgKCogM4hpRFmWRRVaBkIRdZVVEiewJICYKyipgYlhEwCAqIo7DZXNHJsLogFmY/s2p33P+b6W7q7rP+pLv53nqee8951R3VXd1V3d1VXVKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgxzE94Yriipz3fcV+APbUlbpw5RyuNPK7Y4rffjYc1MrPsWmZnyF9ecdm1MrjMfm7Ywe+xwb4ANjHUDsY17WcFlPSvaop+2TdapWFvrtKCEPbVp8ftgN5nXnfZmWyyWPw2Bx2VTGuui1r+xTAivoOUv37a7rwM114ShfO6sIfduHtXbiwC+/uwru68JYu/H4XfqsLZ3Thdl34gmL5vnLcR0N5v14X7t6Fp6XhvL85LfN+ehdumw5X3qfadsVYruvLu3BKWuyTs7vwui5ckBZl8E1d+J0u/HoXHtSFbyribuqC6wrvYV04pwsvSosDZR/Ci7vw8i48Ll1+p7tQ6AA/u4h3dvGZlvOyLnxbjrNKATo1LQqot1O5bn2u7fioFdbh9H1nWuT/xWl8OykN181x5hzU5QlBf2+RFgfoW7vwH134zIzwj114ZRce0oVrhWXv00HsvMf/H+nC07vwtjQ/7//QhVd04cFduHZY/rrz7n32xV14XhdekurlZUp4QReelRYXBXfpwpcV695kpRi31XFd+Im0KE8fS+374dNd+JMuPDYtLoSc7n0pf5813pAWG/ySNO+A2US4NP/Vld6xOZ3HFH+/pAv/mn932cBynKeH5jheViuv6yu6cFFlXf78ovz7GL+VD8ozivQPrUv5/5KZ64oH6ed14R5pcTXnbR/3xcU5LZfk/5fB310c0ua/H0+LyvXEkM51NSvOVeb9XmlxN1Fu71Xz/m9pcSK+RV7XOvPuZaiS+s80XjbXEVTWzu3Cj3fhqnndm9iPcZl37sI7i7wN7ZNLilDuh6em5XHJs6o1ek1a1tjlTthV+K+cJl1B+EAvb0flhZW0fzp//zs9y2jhE/od8nJiwe0LF+ff3aaI38rp+/00nq9P5e+fk38/5aoqXj2qQv3JLvxlWh5wl6XlgTn3hORlXBKWoX9rP8S7wW1fDca868r2lC78VdpM3mNFrPL821341rzudeTdZeWru/Dvqa18zgl9FaOa8e4U8rKuk7H3zVemxfaKFXksS3PL4Ee6cNcNpPsKTe2IY1e7uwg++N6R+isQF7T7VdLugvNPaXGrXy6nxus5tXEb+fsH5nhT7nicri/K6Y3pH1rPvSauJ55A1Ubsfa/1+CBd974sT6hqGlKzwufndGzr+UDM+zen5Z33NvP+f7pwWheuntOxSt5dXq6VlztWXjaRF4Uzu3CNnI5VK0Rvi5t14X+mZTkv74jnnk/i/n1CWlYgVCIrOswVyC0nLPNWRdwWXuc5jdvI35+V4005qJyu26Txk0G8GnSzUMt6YvuvHoz/75DmdRykLSGuS/v2W4q8b0q84lel+8me9Gwz73q+9I05PXPzvu0KpDw+fbetVoKvymmZW4k4no5nP+eIdz7rTLePUT1s/2zpcr5Th7EC8b+vmRbtm2MHj/P1CzlO6wHrdegK6yOVdXym+P4jaXll1lo4na5HFukeWsc/p+WDzZbuzvqNmm1+LV3+YNpmuCysV89H7ljkf91cfo7vwm+m/cm7KvA75LTNyfsuKxCvy5WIeqR9aZGuVt4/N+rCv6Txsr/udD++SANmOIwVSPz/Kyvp9+cvzL9vLSw+qG81Mw9HJq7P+XHbby0/5xbxhnj9V+vC7+W4m7i6mxqcD6Xl7jmN665EYt7PDevddd5dvpWOe8zM+64rEAefjM8p0jUlD+r6/O40Xu7LEJse4wP11rhej5/lfLZ0td6616bFhtSDvr5eJmOhtZBdNnG5LpR/moYrELf7PzCNFzyn83+lRY+bvmX1ab0jGDox/nyxnDFOz+fldMZ0Dy3/fjnO2PMPL/dzu/CqdPCAnxK8/y5OBx/Uxv/PefAcy9HP5rSu62owbtNX7Hne75nTOqd5dWoFcllDmLqNXCan5sP7+ldT+/6pnXti5VBbjv5+IC3Gl8Rtigk0QGrKCXIbwTv3z9KyMJY715/funGZKljfleO0nKT8m7Mmbh//bkoPKeflyIS8fHcRdywP7q029QQ65xnB1Dix99OdG/LUIs5VdfYhyLvCD+W0T71j3cQdSOzBNOV4/VBqPxk7nzdNy16XtfTHilrNXRpAqPFSGgOj3qR/M2FZ8Vh9TE4LdyEzPLcLH+3C+7rw/sagHfV3qe1g0U46muO0Ll9pUWHUbXGtCeuEtBz0VXsO8oAcp1ZQvOyr5nTHg6T1YPrrtOwvXzuYpj7/UJ/8r64s28t8dJp+Ai2vqPVgU3eDGqimHiy667t3Woyv0cA7XeFrn/3fYhlTt5meC9y4SP8cjvu4GXkvm7jKvD8g510DcJ+RFk2o68i7nuXdKKe7tVOEbLoJq/XuymX2/jldtf3nPLZ2UPF2+nBajDS/Zs86PictHsSfV8QZCrGX5lcW2xWN9HBRXSqv3hg+P8fRAKaxwXX+TD1edFLQA9xrTFzP546kO+7o89N4IZx6V+Dvb5IOtle3HHBx3MN3TFxf7W7Hn7+hsrx4d+YTQGvzhvOrKzkNLDwlLXrZXKWyTu0rdQ3WSfsDPctrPQGpLdzTgcw5mMuxO3PyrvE356fFCGjlvdZNWs1kOvnroezRsLypd60aNHe1xrzPqUAenhY9974vLXr7DYXbp8XFgfb/lLsD/dW4muMreXB5//q07BE3tnxvH42PKgfODo2peWyRrtqy3STMXciGxfEK7go6VoF8ogtfl+Osu7eDD+xH5HUNXWm6EL0nLU+EYweol/vQNH5Crx1M983LGSuUTocqWA/oqz3/eESRzr7lqSnB/elbTuLxBKqmgZun/mlkji1CORWKqPK/T1pMaeJ0T7mKfWpeztTy4vWrd9r7Z+b9vLRo6lwl73r+9c8T8+6y+7TGvM+pQFqaPct1qEL5aGrflsrvTSp5cLm9f4hTO5Z0p3dciF8OBHSTpWfrlac3pDtWTl4OJjhmYnCh0JVASwWiK4xvyHGuPGE9Lf2zXVBuN5KO+LkO0m/OcWqzrsrz07wKZModj7/TmIixq7342clF/iN/9sshz60VnpoCdVDHStazmbZcEXviQP9WzQLu+dV6IvUdg8e4TLki9LZ0d90peVcT1H3TwWduU/JeTueuO5cpPb/8ve5+bl7kZ2idMqUCuXWOc1xI71CIMymrbH6sYR3elnfL8Wp3brUeoF7XB9PBaUhq4jmq1iklNgvP7YqMCbxxNbK7tQL5+hxn3XcgXt71U/0gciG9T44zVBCdPxX+C1P9CmbsQLowXX4ur5K/f3CRzrGCPvT8o+/BZGtadZUZT1yrjpKOJ2KP5G9pT3f+zw/5aTmgY9491Utrs8vfp4MdLNaVdy3L85pNyfvrw7LG1iNTKpDvyXGm3IH4qr9lNgZX2E/KccbukPUM4+8r6fa6Th1Z3hD/9ucb0u1wJMehGWuD9qkCiSf7P0vjJ3sXoDMrafHnumvyg9GpDyf9e8Wv5b3sKVXrjvy2NHxi9efuedT6YFIDHz0qfJ3vfogn44cU62xJ15SBdk6z5xFrzbsqzhvmuJvKu5tC15n3bVQgzodcr2E93uZjc895eTesLC8eQ99QxJ2Sbj2HrD3H8Tb/qRyHCmSD9qkCEe/sJ6aDV0FDheQd6eDVcWnOlcvY+sYGih0TvntnEa8M5dVdubz44D9Od1Kr5HQQ++p76mzFLeIV+a+kaSf38xrX4bx/e2q7+/B3arLzXde28t76UPdNDcuWTVcg8SLtXZU8lHdQMb7FVxaMdVDxd3qO9zkDy2pJt57V+hmOu1mXwRXMg3IcKpAN2tcK5AdH0lKeMP1+gL70+LMXpdUqEMd7VsO6lJ5abxR/frsi3+V2aD1Je3ktAxJX5TKjZytTXx9wUo7b8hzpeY3LLgcvbiPvagr644b0xed1N8tx+/K+7QpE3lRJvz9/zcjyvO4T0+Xz3LeP1PHFzWhzKhB5S7HMoXQ/skgjNmDfKpDYJfATI+mJBeinc5yyoEy5I6iF2KOp7KljPnHdO40fmM6Pxgqc0LMs/1sPAWvtynE9r87xtjEXkNehKc2ndN18eo5Xa8pR198PT1juq4p0bZLTrqnsa2OWYhrHOmFsuwKZcpf8/JF0xztl/37s/KF9OmUGib60a7yOmmnVxfh9PeG9eT2e3ZoKZIP2rQJxenSb+57UdqXx7IH0eFl6SF17gVQtON5Fqf7Q+7np4AE4VBnpoXzf1ZgL/I9W8l/m57uK+Jvm9fxSGq8wYzrV/DA2Fb+XedfUnne1q9+kiL9pXs8zUz3vzoMG63ra+6GBtNuqQLSe2jHh8vuwHKfvzi4+Yxy74IvNsN85I92R4mlQ73GVQMWxBftWgYh3/LNS24n4zan/rsAF/m7F7+cGx/+xIp1xvdomb62sz/l5ds9yvAx5TqqfnPzdS4u42+B13SC1VdD+bmzGXi/zZak97y8v4m6D9/d103LW2VpzpcJJOd7Q3fKmKxB36X5Aaq/0x/ZXHKvz0TSebq/rBTnOOjs5YEf2uQL5sTR+Inaa1Ke9byp0p+/MNF4R9R3oYwfAM4p0xvVqrERtSnrn564jy9EdWMu0K17H9/Ysaxu8jT2tfMsJ/7E5ztBJVM1XHjTZcsc4dUDdujjvL071vLvsPTHHWUcFMmUcSByQp0rvaGo7tj6Zfx/T2JdueWPDdnCInVGm7rd1jTvDGuxjBeLl6iU9tYPJB8BdcpyyR5aW9bY0frC0Bsfv61Hj9f5IZV2xKazv4b//rfb1S1Jb3lXRzG1XXpXzXXtxVjyxvP7yi/n/nHdNlVPrfeW8qydRbWzOprQOfI3pvSD13y3PqUBuWaRjjJevbrB/XqRpbF+9tIjfx9v/YUXcsfKvCvX+6eC2cGXC+zwOkX2sQJwmzSP012m8sPvK7pk5TlmB6M6k1sSgoBHDmsl4bMCe42uyti8q1uP1/kaRrqETiZ7v9M0x5OXcs5LvuI7Tc5xN9j4a4rR/Yao/8I+DJ8s5kGRKk6Pz7l5xu2jvdto1b9jfprYLBzXz9I2QnlOBaCyOnifoHTffPRJumxZvrdTcbK2DMv39STldY9t3SsXv77yd1PlBz+76ym4cQc/dxJ7axwokLrvW/XborsAF/k6p7aSmuY7U1ju2DeLnPxTWEyuRPynSVQbn40VFPst0PzGN5zumZdcv0WndV30PUmP+nf6npvFKOG7f/1HE3Tbv+99NbXlXr62+gXRzKpA5IZ68a5Wzny1NOXm3vk4ipkP/1p2ZxmqpMrx2Gn4+xnOTPbOvFYivSHwlXjswdWUXe7i4ANZebuNCrJHvmrCw9tzBy4nPQeJ0Dp50r/Yg0W3A5ZXX1JOxeiBNmTZ8E5wHjUGpnTxaOiK8orIc513l9auKuNvmvHu8Tst8XX3PqzZZgfhk3TKHl/ePJs782pymlnLlvPxAsZxaKKeE0b9VyWrKffXuU09ENbt9YbG+oVl7sWX7WoF42To51qYgGXqQrLxdkMYLtE9SZ+c4Ly8+H/p9bMf3+r6/MZ06QdygyGep9kDSy1Lz3K4njWu924v5Kd9pH+/i3pHG95k/V3//2lTjm+YKRGORWivPuxVxZVt3ILWKxv8unym2cB7+oGFb9JWLod+rUtYF4gvSouPJtcM6ad7asX2tQGKPnFr7sq/6npLj+MBUO3vrBG8PzHFqU554OR9Ki/ehxPU9pUjP0AlEDzH7pnOYMs2EP9f7NsamctkGlwO1Zbf2ZHtMjlOmXe+Oqe3vOKhzygSNm+D1H0n1KWdcLh6a4+xTBeJ1af/4WJh6fMd5tnzcTZ354bK0vGO6OPWXgY+nRa+/64f1cjeyI/tagcS01d5yVt4V+KR08sDvyzzpwZ+nhf/W1P6g8eQcx1dBntqidrczNGYjTpPxvsZlva4n/rbFacJrE9053WV3Vqddlf4HG5fx6iLuLsSZE2rlxhXIE3KcfapA+kb0zzm+HUe98jxKf+70QWWl4grF20UDFx+VlhdjVCI7sM8VyNSp0Y+mg22lj08HD9wyxKYQd4PVHc/fpeHt0HcikJZpR5z+hxT5szgGpJYGL+sVRdxdcDnQGwzVm60l3b+U45QViJ5DfaRxGb9bxN0Fr1vNKrUpXco75W09A5lyotZfNeP6eeIqlYieh/ic4okP15XO+DxHzdSeHYJKZMv2uQKJ8+yMjYmITQcn5jjKV+05gj8/p1hfrQ23vFqTIz3p6UujrtA91frQHYgqkNrbB/fpzWvrrEDUEaE2B5aX8XtF3F3wuq+T6id+VyC/kuPs0x2Ig8vbH6Xlxdic49z7VWXi7SE/fpi/zopE/9aLpuKL7rAl+1yBxDEGfhNZ7eA8LcfRiPDalazjeNZO3wr/YhqvQLw8neQ9HuTUYplDB6bGtQw9+PX/Nd3EXxXxxg70Mv62xXEAYxPqxW36uBynrEBUDo82LmNoQOI2Oe9qAq0133nbnJHjrFqBXJKX2Rpa7gDcVKR/axbeqxbpm8L7Vnf36k1Z3lX7wfmqFaXLg47HE/I6uRPZkn2uQKJXp/GTetkufiSNP9SMhdgT8XmeIP1/7N0G/uzSELf1bufc/PuxaSG0XX3VVqtA1O14lYN8HXyi0KC11oP9UUXcOCivNnjUn2sb7WoUupUj8Vvy/oAcZxd3IPGqfSyUzbRzj/X4LEUXgndOi7EiZRpccbVWdEPpVaVHr6wt2vcKxAfZGelgQRlK39H8+9pzk/iCGz//cH6ukdqvgrUenUT+sfJ7p9vzQA2NGvf+qFWYcSzEtYq42zZl9mDn535F3Jj2Wtdr5113pbuawsW8H1smJ2wZAzOlAtEcXKqIVabOGAm623t+WvZuc1pqo8Xd5HSLnLa5x3sclyXaZpqqR2VAF17upt9XVqZ2Bdbfu+f10JS1BftegXgdN+9JS1/61IygsSOt4zlemZdfTr5WG1Hrz3UQf0v4/1jaPpMOvqd8LL+/WVm/l1l7UdE2+CRaa/qL6f7BHCce5E7/SyrLiYMo/1sRd9uc/l9PBy8UxsqAn9PNGYkePzupSEONmk7V1fqlqV7Rx+3/2sbl1yiP5Uhy/VuTNd4+LS7G9PpcTRVUDi5suSuJF4VjrwzAGu17BRLHB3xwJH2xAOmq68LKb32gl23xPhk+ufjd0Lo0dfsjis+Gtp3agGuv83Q6/Eyl5Yr2lCLtu6JnEi0nflXy35TjxDLk9J+exrd9XMd9iri7UnszY7xj7JtEc84dyG1yHDVhHlsJ5XiZ+zeuw7/pm3pmFZ7nqu84UFPXSWkxJkt34i4HLZWIt/+9w3qwQftegUStB6maNi4a+E0ZyqnA/fd7GuNrUNP70/B2i+mNdztDvP4fTvWDxss9M8fZxVV47IXU+hrfD6TFs44YX+aMaH9JjrPLvGvCzn9KbXnXRcQ1ivjx35t8H0ic8VY831pLGRuagn8drpTGKxSNzfJdaetA1T/cQDrR4zBUIC60T8tpaJlvqHZFpb8aTX61vOxyim2NB6m9IKc1OL1PLvLTx9tUo2z/s7J+f673j+xqTqjWaezjwT00kNL/1xxMtRdUxcqo74S8Dc77vVJ73ocuIrZRgZi3s3oQ1rqL+/O/TMtOJpvczm5KjhMnen0PTfXt4u+0Dfvu9LBmh6kCqc01Vaa1djC/Ji+370pQzk/1E8OU9Hx/kZ8+sSdWbWbf+N1P5njbbsqZMv9ROZBy6KVKauZ7d2rP+ykDy9s0p7fWdBe/8zQhQ4NIt1GBxDi1WZ/j86ba5IpXagxz0lo+a2opFz9c5BUbcBgqEKdRV5r/MJLG1uCDZeiOwP/3W/ZWueNxOjVK/QuK/AyZMqW7DxZVNtu4QuxL55GR9PVtj7FePa2zKMe8v3lgWZvkdN481ce++HPdUfY9+5FdVSCnpPoJ2eHkIu42xSljattnqKs4NuAwVSByXmov8LWT+h3yMocqkDuvYV3l3U6L1rm8yhNpX/fQTfL+Pze1V3TvCunrq+j8nXoqtVwklK8H3tYdmNP+2tSe93em4Up+VxWIn/W1NAuNvXtFD/LVG1Hdc288EPTdjWamV7yNWntIPi3/niasDToMFYis667A+dA06H1vxYv/1zapvd+jtQJ5UpGPMXFq83emeiXm7/Qw/5o57qb3Tfmwv7XZsJzGvRQnlGx59Woc4T+0P9fNlVTLuJeY97Er4l1VILeqrCPm7yd61udyptcTfCz/VtPZ/FcRPp2/07Otaxd5buXt/qQ0fg7w9n5ekUZswGGrQFoP2trB8Maw7LGC/Ecrrs/bLb7BsMWUlzQNHTSbOpF6v18nLbtWj22f2ITTUna8jR6dpuX9zCL+JnjZ6uTQ0pzq79Rb74Qcty/vu6pAWjo/+Lsf6Vlf7PjQcv5YpUuwj4mHp7YK5KyZ68EEh6UCcTq/Ii0OxpYDbKxwPTUvb+jgax0g1lJ5fDynO+ajNb+6Wmu9C/KB/uCQh3VXInF+o/PSvBN8rdzEmXlrI/zLvMdpQjaVdz2Le1ualvcX5rhDed92BeKT8aMa8uF03LZnfbEb97+k5b64rCd4HT8zM91Os58NcgeyBw5bBaJ1vjXVr5pqJ5ra8wJ/7jfNrbKu82bmecqgQu8j76f7hGWsYz/F6ShUebxyQpr8u+/I8VvSU3bdbs27tnk8Qa0776o8XjUhTfqr91bcMMffhwokTtpZe/tjnPHgxj158LLUJbh1Gv5nr5BuhT+upNnr6Zs2H2t2WCqQuL7aNB+1A1p5OKFYZineAXwiDW+XsbBqQXYaNMajNsV5XyXymJC/VU6mMa5mOT4vtW9//+bXcvzWNMTp3T+Uxk8YZd4VfjGtL+/ebyoLb07tefcV8m/k+GNp2FYF4vEVct9U365Og+6CPfN0X7d3/X1LZXn+XC9L6xtIOsZ5/PbU/tKyBxVxsQGHqQJxQbhnmleBuABfEJY5VIDjHY+bK6behYw9fJya57tNyHNsLtAYheuFPMX5iMr5v+Jn8cRp6pXml2a1Tg2uvxqlPWdQl9dfe83wUN5ftca8qweSm9Na0uHtczQtKl2vY8g2pjKJeb5j43qc17NzvLGu1y0Dfb1d3JniKpXt4nV6HWcV6RoLJxbpwwYcpgok9viojdIeOxha7whWueOJD45vUCxvqimD9eL6fbCq58svp+Vb2/qWP3QQK80at/H6sN7WitS/+6m8rDkHstPl2YlbnkXFvOv5k3rtDI3UH8u70quT0BvC8lrz7m3102FZLfmcUoHcsnHZcR3aDjrRewbc1mdLY02+/uz2DcuMsye4SfPYtHxeF4PvlnzcPLhh+bFXXm3eOazBYapAYvfWWtvtWOFqPajLW/0pFYjXpXSWE9lN5fi6mp5yB+Dfed+pm6Vegas7OPUi0jQu5TbQ1awms7tpWsx/9Kdp+ZbBSyes1yf65xd5mJt3VcKeWmbKSdx5/9e0eIPhPUbyflzOu2Y3ftwKeXc5mZL3ORXIy9JiH+ntjk8eCbpg+q20aHr8t5Cf1hkUdAf55UU6+9Le8j77uP/Ui+02xTL6lnt8zkNsnq1t+8fnuNx9bNhhqkDiOp+dpp3UnX6dEFqnAPf335jqr2odKsjPaFxXjQ+E70vLNuDWE1ps1nHQSUovo1KHhNelRXOPrrQ17uRDxe/74rfkXYMG+9rN5+b99ulgD5+WtFw6kHe1w6vN/rU572/Mef/wmvKuZs8pc3TNqUDmhta3ADovD89pGzsZ+7sn5Di1O0WXXd2hqyK8dVq8h/2qOajS0Ctq1YHELxhrrfD+Pe32HHWFctgqkKnjI8oCe2FYRu3Ajr1VWga19a1vbpfFPn2T9005yfhk2LrNpr7QJ+6Po2nZdLfOvMfnIZvK+9Tt5OCTpmaDnvrMZ04Fckma/krbKRWv/mr24JYBmrE7b21m4ridY9OgenHp+NSFhwbFxhdNtaTd+8tvUeTuYwsOWwXidWqK57GXOA0VLt8RtBYur++5xXJqB4b++uVWcTmr8nIekpYH1pwuxrHbq0+Wl66wvLht1NTkLp/rPIi9LM/Kuo951x2M57uakvdt3oG0bB9vh5YJQM2/eWCadqxcPJJX75vW7f/eLnxpsU2xQYetAolTXbw3LU8ktQLm39wrx586IvwXUvtBEafAPq5I9zp4u2ush696p14tr/uE43RoevA5J9BWzrtfIRtPdrvOu5rF3Dw6t8v2riuQ2GR3ak7TnOPcMxRPGYB7aRGm3C053Ufy+rn72JLDVoHE9bbeFcwdzBZ/d7OwnNZb6V/NcTdRmL1MvRrWI4Bbr9bWGeIzhvPT8v3smzqA46C+u6TlQ2E30ewq73qO5J5eq/Q222UFEgrTU9AAAAVRSURBVPPz9Jyeqce4f68ef352ser7e2pp9n6/R143lccWHcYKxAVEA4XiCXuskOmvro6Pz3GnTilyfKq/fKdc3z2L9K6bl6tRzh6d6yuxTZ9M48lGHQzUVdbbdhvlwnlXB4cL0sG8b/rEG/OuZkpNreGBcavONLuLCiTmR3995zHWxXmMt4HOEz5mxpqp5oR4p6T0+xW2PDTfssNcgaiPfpm+vuCC9pwcb+5V1YuK5Q0VbBfqm81c3xTeFmoqUz95341soiKJy3Q+356WrwWe+8KguZx3VVzqKfSxnnRuMu/qaXUkpGWVZsptViDx+U/Mjx5c/8Ca8hMn3HQF73Wumq/YwUHl/U4hzdiyWIGor7x2iq6qyh4c+kwFQJXM1+U4u6pAnOarp0Vvn6E0O3wq/8ZXKVMLWnnH86mRdbmL7dGcvpjeTYknbo0V0QSQ8WTqdvqpD4nLB83xpKbnOz+XFl0unYZdPLSMeVfPJ+XdzVpl3qd0/x3L+1904WfT8vnWOvLu+Gr6uSiva6xMzw0x//63yqruOtzteF2TcHq/qILXuIxPhvXGyqu1t1ZMv/6v+diuH9KMHYiDgOIO7tuJPlHXJobbBq9bfch9VTJU+PzvE4u4rVw4jwwsN4Z1DaCbyiN3vT9PSIvBcOp+3Fdp+IB0KLuExjjOq+YE07iJU9JylG+cZmJXyrxfJy26cr4n1fPuCqJ2ktXYAr0U7MfT8qVQ67zjinOvzZllYUrQMfy3XTgnLbqZxwuddZfXuI3UI1FTopRzy7mS79sf5f5T2tVce8cNphkTuOCqDfcRXTijC6cNhNO78Mi0vRf3jHGhUaWgNmhdQZ02EJQnTa43947Av79aXs7YNlI69DzgpkU6t6U8qenkrikv1H35vLToYtvaY0snMvUs0pWemoium5cZZwTYp66SZd7175PTojPD+Wla3v8jLR4Ca/T6w9JyXIetO+9elu4CdIypjJ3eE06bGR6TFk2cenOjesn5ztE2eQdZVvC6a9Axq6Yt3ynXyqEuhNRp5qSe5QJYs747Ax1wqgTVE+3uaXGVriYfHZi6Y9L7Op6ZFicwTZyo5rCr9Cxj3yqOUt+dgdKrC4j/nvrzrqk+nHe9/EsVxmHM+xTbzk+5X7RejdnQc5dHd+FZafEOD+0PzT+nCzHd7X5tuvw7SHZ914setRk9HfbpAPKEa9tIt2dzbQn7dGXUN7vsFM73PuWp1WHL+5QyNid4avtdtx7M2Sf70FwKXGGVs5zGE4rDlcN3fdOeH1Zz847Nitu93B/sCwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGCD/h+SCn7ykLkzaQAAAABJRU5ErkJggg==" alt="TWOOBS" class="logo" onerror="this.style.display='none';document.querySelector('.wordmark').style.display='block'">
+<div class="wordmark">TWOOBS</div>
+<div class="report-title">Weekly Report</div>
+<div class="report-period">Week ending Sunday 17 May 2026 &nbsp;&middot;&nbsp; Mon 11 May &ndash; Sun 17 May 2026</div>
+<div class="page-wrapper">
+  <div class="main-content">
+    
+<div class="section">
+  <div class="section-title">Total Brand &mdash; Week ending 17 May 2026 &nbsp;&middot;&nbsp; LY 12 May &ndash; 18 May 2025</div>
+  <table>
+    <thead><tr>
+  <th></th><th>Actual</th><th>Forecast</th><th>LY</th><th>vs LY</th><th>vs Forecast</th>
+</tr></thead>
+    <tbody>
+      <tr><td>Sales</td><td>$87,524</td><td><span class="neut">$78,000</span></td><td><span class="neut">$38,272</span></td><td><span class="pos">+$49,252 (+129%)</span></td><td><span class="pos">+$9,524 (+12%)</span></td></tr>
+      <tr><td>Transactions</td><td>563</td><td><span class="neut">557</span></td><td><span class="neut">245</span></td><td><span class="pos">+318 (+130%)</span></td><td><span class="pos">+6 (+1%)</span></td></tr>
+      <tr><td>Units</td><td>760</td><td><span class="neut">&mdash;</span></td><td><span class="neut">357</span></td><td><span class="pos">+403 (+113%)</span></td><td><span class="neut">&mdash;</span></td></tr>
+      <tr><td>ATV</td><td>$155</td><td><span class="neut">$140</span></td><td><span class="neut">$156</span></td><td><span class="neg">$-1 (-0%)</span></td><td><span class="pos">+$15 (+11%)</span></td></tr>
+      <tr><td>UPT</td><td>1.35</td><td><span class="neut">&mdash;</span></td><td><span class="neut">1.46</span></td><td><span class="neg">-0.11 (-7%)</span></td><td><span class="neut">&mdash;</span></td></tr>
+      <tr><td>Gross Margin</td><td>75.6%</td><td><span class="neut">&mdash;</span></td><td><span class="neut">81.4%</span></td><td><span class="neg">-5.8pp</span></td><td><span class="neut">&mdash;</span></td></tr>
+</tbody>
+  </table>
+</div>
+    
+<div class="section">
+  <div class="section-title">Total Brand &mdash; MTD (1 May &ndash; 17 May 2026)</div>
+  <table>
+    <thead><tr>
+  <th></th><th>Actual</th><th>Forecast</th><th>LY</th><th>vs LY</th><th>vs Forecast</th>
+</tr></thead>
+    <tbody>
+      <tr><td>Sales</td><td>$186,657</td><td><span class="neut">$158,000</span></td><td><span class="neut">$97,735</span></td><td><span class="pos">+$88,922 (+91%)</span></td><td><span class="pos">+$28,657 (+18%)</span></td></tr>
+      <tr><td>Transactions</td><td>1,243</td><td><span class="neut">1,129</span></td><td><span class="neut">638</span></td><td><span class="pos">+605 (+95%)</span></td><td><span class="pos">+114 (+10%)</span></td></tr>
+      <tr><td>Units</td><td>1,559</td><td><span class="neut">&mdash;</span></td><td><span class="neut">896</span></td><td><span class="pos">+663 (+74%)</span></td><td><span class="neut">&mdash;</span></td></tr>
+    </tbody>
+  </table>
+</div>
+    
+<div class="section">
+  <div class="section-title">Online &mdash; Week ending 17 May 2026 &nbsp;&middot;&nbsp; LY 12 May &ndash; 18 May 2025</div>
+  <table>
+    <thead><tr>
+  <th></th><th>Actual</th><th>Forecast</th><th>LY</th><th>vs LY</th><th>vs Forecast</th>
+</tr></thead>
+    <tbody>
+      <tr><td>Sales</td><td>$83,517</td><td><span class="neut">$74,980</span></td><td><span class="neut">$35,971</span></td><td><span class="pos">+$47,546 (+132%)</span></td><td><span class="pos">+$8,537 (+11%)</span></td></tr>
+      <tr><td>Traffic</td><td>22,589</td><td><span class="neut">17,852</span></td><td><span class="neut">14,105</span></td><td><span class="pos">+8,484 (+60%)</span></td><td><span class="pos">+4,737 (+27%)</span></td></tr>
+      <tr><td>CVR</td><td>2.4%</td><td><span class="neut">3.0%</span></td><td><span class="neut">1.6%</span></td><td><span class="pos">+0.7pp</span></td><td><span class="neg">-0.6pp</span></td></tr>
+      <tr><td>Orders</td><td>535</td><td><span class="neut">536</span></td><td><span class="neut">229</span></td><td><span class="pos">+306 (+134%)</span></td><td><span class="neg">-1 (-0%)</span></td></tr>
+      <tr><td>ATV</td><td>$156</td><td><span class="neut">$140</span></td><td><span class="neut">$157</span></td><td><span class="neg">$-1 (-1%)</span></td><td><span class="pos">+$16 (+12%)</span></td></tr>
+      <tr><td>New Customer %</td><td>59.4%</td><td><span class="neut">65%</span></td><td><span class="neut">47.2%</span></td><td><span class="pos">+12.2pp</span></td><td><span class="neg">-5.6pp</span></td></tr>
+      <tr><td>ROAS</td><td>4.7&times;</td><td><span class="neut">3.0&times;</span></td><td><span class="neut">2.7&times;</span></td><td><span class="pos">+2.0&times;</span></td><td><span class="pos">+1.7&times;</span></td></tr>
+      <tr><td>CPA</td><td>$33</td><td><span class="neut">$65</span></td><td><span class="neut">$58</span></td><td><span class="neg">$-24 (-43%)</span></td><td><span class="neg">$-32 (-49%)</span></td></tr>
+    </tbody>
+  </table>
+</div>
+    
+<div class="section">
+  <div class="section-title">Retail Store &mdash; Week ending 17 May 2026 &nbsp;&middot;&nbsp; LY 12 May &ndash; 18 May 2025</div>
+  <table>
+    <thead><tr>
+  <th></th><th>Actual</th><th>Forecast</th><th>LY</th><th>vs LY</th><th>vs Forecast</th>
+</tr></thead>
+    <tbody>
+      <tr><td>Sales</td><td>$4,007</td><td><span class="neut">$3,020</span></td><td><span class="neut">$2,301</span></td><td><span class="pos">+$1,706 (+74%)</span></td><td><span class="pos">+$987 (+33%)</span></td></tr>
+      <tr>
+        <td>Visits</td>
+        <td><span class="manual">not entered</span></td>
+        <td><span class="neut">&mdash;</span></td>
+        <td><span class="neut">&mdash;</span></td>
+        <td><span class="neut">&mdash;</span></td>
+        <td><span class="neut">&mdash;</span></td>
+      </tr>
+      <tr><td>Transactions</td><td>26</td><td><span class="neut">&mdash;</span></td><td><span class="neut">16</span></td><td><span class="pos">+10 (+62%)</span></td><td><span class="neut">&mdash;</span></td></tr>
+      <tr><td>CVR</td><td>&mdash;</td><td><span class="neut">&mdash;</span></td><td><span class="neut">&mdash;</span></td><td><span class="neut">&mdash;</span></td><td><span class="neut">&mdash;</span></td></tr>
+      <tr><td>Units</td><td>31</td><td><span class="neut">&mdash;</span></td><td><span class="neut">24</span></td><td><span class="pos">+7 (+29%)</span></td><td><span class="neut">&mdash;</span></td></tr>
+      <tr><td>ATV</td><td>$154</td><td><span class="neut">&mdash;</span></td><td><span class="neut">$144</span></td><td><span class="pos">+$10 (+7%)</span></td><td><span class="neut">&mdash;</span></td></tr>
+      <tr><td>UPT</td><td>1.19</td><td><span class="neut">&mdash;</span></td><td><span class="neut">1.50</span></td><td><span class="neg">-0.31 (-21%)</span></td><td><span class="neut">&mdash;</span></td></tr>
+    </tbody>
+  </table>
+</div>
+    
+<div class="section">
+  <div class="section-title">Returns &amp; Refunds</div>
+  <div class="two-col">
+    <div>
+      <div class="subsection-label">Last Week</div>
+      <table>
+          <thead><tr>
+  <th></th><th>Actual</th><th>LY</th><th>vs LY</th>
+</tr></thead>
+          <tbody>
+            <tr><td>Units</td><td>32</td><td><span class="neut">23</span></td><td><span class="pos">+9 (+39%)</span></td></tr>
+            <tr><td>Value</td><td>$4,828</td><td><span class="neut">$2,759</span></td><td><span class="pos">+$2,069 (+75%)</span></td></tr>
+            <tr><td>Return Rate</td><td>5.1%</td><td><span class="neut">6.5%</span></td><td><span class="neg">-1.5pp</span></td></tr>
+          </tbody>
+        </table>
+    </div>
+    <div>
+      <div class="subsection-label">Month to Date</div>
+      <table>
+          <thead><tr>
+  <th></th><th>Actual</th><th>LY</th><th>vs LY</th>
+</tr></thead>
+          <tbody>
+            <tr><td>Units</td><td>62</td><td><span class="neut">51</span></td><td><span class="pos">+11 (+22%)</span></td></tr>
+            <tr><td>Value</td><td>$8,741</td><td><span class="neut">$7,395</span></td><td><span class="pos">+$1,346 (+18%)</span></td></tr>
+            <tr><td>Return Rate</td><td>4.3%</td><td><span class="neut">6.8%</span></td><td><span class="neg">-2.5pp</span></td></tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+</div>
+    
+<div class="section">
+  <div class="section-title">Stock Report &mdash; by Product</div>
+  <table>
+    <thead><tr>
+      <th>Product</th><th>SOH</th><th>Sold LW</th><th>Sold LY</th>
+      <th>Wks Cover</th><th>Age (wks)</th><th>Unit %</th><th>$ %</th>
+    </tr></thead>
+    <tbody><tr><td>The BFF+</td><td>730</td><td>181</td><td><span class="neut">0</span></td><td><span class="cover-mid">4.0</span></td><td>27</td><td>23.8%</td><td>28.5%</td></tr><tr><td>The BFF</td><td>2,725</td><td>124</td><td><span class="neut">66</span></td><td><span class="cover-ok">22.0</span></td><td>65</td><td>16.3%</td><td>15.6%</td></tr><tr><td>The OG+</td><td>2,978</td><td>105</td><td><span class="neut">34</span></td><td><span class="cover-ok">28.4</span></td><td>238</td><td>13.8%</td><td>18.7%</td></tr><tr><td>The OG</td><td>3,372</td><td>101</td><td><span class="neut">60</span></td><td><span class="cover-ok">33.4</span></td><td>238</td><td>13.3%</td><td>14.8%</td></tr><tr><td>Pom Pom Thingys</td><td>289</td><td>71</td><td><span class="neut">0</span></td><td><span class="cover-mid">4.1</span></td><td>30</td><td>9.3%</td><td>2.9%</td></tr><tr><td>The Sneaky Jane</td><td>934</td><td>50</td><td><span class="neut">41</span></td><td><span class="cover-ok">18.7</span></td><td>103</td><td>6.6%</td><td>10.0%</td></tr><tr><td>Protecty Stuff</td><td>4,917</td><td>34</td><td><span class="neut">40</span></td><td><span class="cover-ok">144.6</span></td><td>289</td><td>4.5%</td><td>0.7%</td></tr><tr><td>The Hiker</td><td>943</td><td>28</td><td><span class="neut">0</span></td><td><span class="cover-ok">33.7</span></td><td>11</td><td>3.7%</td><td>4.7%</td></tr><tr><td>Blooper Booper</td><td>2,753</td><td>22</td><td><span class="neut">12</span></td><td><span class="cover-ok">125.1</span></td><td>11</td><td>2.9%</td><td>0.3%</td></tr><tr><td>Sockys</td><td>395</td><td>21</td><td><span class="neut">9</span></td><td><span class="cover-ok">18.8</span></td><td>107</td><td>2.8%</td><td>0.6%</td></tr><tr><td>Thingys</td><td>755</td><td>15</td><td><span class="neut">22</span></td><td><span class="cover-ok">50.3</span></td><td>234</td><td>2.0%</td><td>0.4%</td></tr><tr><td>Toe Sockys</td><td>138</td><td>6</td><td><span class="neut">0</span></td><td><span class="cover-ok">23.0</span></td><td>7</td><td>0.8%</td><td>0.2%</td></tr><tr><td>Bungee Thingys</td><td>138</td><td>4</td><td><span class="neut">0</span></td><td><span class="cover-ok">34.5</span></td><td>7</td><td>0.5%</td><td>0.2%</td></tr><tr><td>Conscious Convos</td><td>231</td><td>1</td><td><span class="neut">0</span></td><td><span class="cover-ok">231.0</span></td><td>13</td><td>0.1%</td><td>0.0%</td></tr><tr><td>The Gift of TWOOBS</td><td>1,981</td><td>1</td><td><span class="neut">1</span></td><td><span class="cover-ok">1981.0</span></td><td>164</td><td>0.1%</td><td>0.1%</td></tr><tr><td>Blocky Sockys</td><td>4</td><td>0</td><td><span class="neut">0</span></td><td>&mdash;</td><td>&mdash;</td><td>0.0%</td><td>0.0%</td></tr><tr><td>Fancy Thingys</td><td>6</td><td>0</td><td><span class="neut">3</span></td><td>&mdash;</td><td>&mdash;</td><td>0.0%</td><td>0.0%</td></tr><tr><td>Hanti Choker</td><td>0</td><td>0</td><td><span class="neut">0</span></td><td>&mdash;</td><td>&mdash;</td><td>0.0%</td><td>0.0%</td></tr><tr><td>Hanti Sunlace</td><td>3</td><td>0</td><td><span class="neut">0</span></td><td>&mdash;</td><td>&mdash;</td><td>0.0%</td><td>0.0%</td></tr><tr><td>Rose Choker</td><td>13</td><td>0</td><td><span class="neut">0</span></td><td>&mdash;</td><td>&mdash;</td><td>0.0%</td><td>0.0%</td></tr><tr><td>Rose Sunlace</td><td>24</td><td>0</td><td><span class="neut">0</span></td><td>&mdash;</td><td>&mdash;</td><td>0.0%</td><td>0.0%</td></tr><tr><td>The BAE</td><td>4</td><td>0</td><td><span class="neut">1</span></td><td>&mdash;</td><td>&mdash;</td><td>0.0%</td><td>0.0%</td></tr><tr><td>The G.O.A.T Tote</td><td>500</td><td>0</td><td><span class="neut">0</span></td><td>&mdash;</td><td>&mdash;</td><td>0.0%</td><td>0.0%</td></tr><tr><td>The Keybee-Jeebee</td><td>319</td><td>0</td><td><span class="neut">0</span></td><td>&mdash;</td><td>13</td><td>0.0%</td><td>0.0%</td></tr><tr><td>Collaboration - Cungelella</td><td>79</td><td>0</td><td><span class="neut">3</span></td><td>&mdash;</td><td>18</td><td>0.0%</td><td>0.0%</td></tr><tr><td>the og kids</td><td>60</td><td>0</td><td><span class="neut">0</span></td><td>&mdash;</td><td>&mdash;</td><td>0.0%</td><td>0.0%</td></tr><tr><td>thingys kids</td><td>1</td><td>0</td><td><span class="neut">0</span></td><td>&mdash;</td><td>&mdash;</td><td>0.0%</td><td>0.0%</td></tr><tr><td>This Candle Smells Like My Feet</td><td>87</td><td>0</td><td><span class="neut">0</span></td><td>&mdash;</td><td>11</td><td>0.0%</td><td>0.0%</td></tr></tbody>
+  </table>
+  <div class="legend">
+    <div class="legend-item"><span class="dot" style="background:#FF2E8B"></span> Under 4 wks &mdash; urgent</div>
+    <div class="legend-item"><span class="dot" style="background:#FF8040"></span> 4&ndash;8 wks &mdash; watch</div>
+    <div class="legend-item"><span class="dot" style="background:#007836"></span> 8+ wks &mdash; healthy</div>
+  </div>
+</div>
+  </div>
+  
+<div class="analyst-sidebar">
+  <div class="section">
+    <div class="section-title">Analyst Notes</div>
+    
+<div class="analyst-persona">
+  <div class="persona-name">Ecommerce &amp; Conversion</div>
+  <div class="analyst-subhead">Working</div><div class="analyst-item">✅ WIN Online CVR lifted to 2.37% from 1.62% LY, a +46% improvement that's driving outsized order growth (+133.6%) on only +60.1% more sessions.</div><div class="analyst-item">✅ WIN Online ATV held at $156 vs $157 LY and well above the $140 forecast, meaning higher volume isn't diluting basket size.</div>
+  <div class="analyst-subhead">Needs Attention</div><div class="analyst-item">⚠️ WATCH CVR at 2.37% is still tracking below the 3.0% forecast — there's roughly $14K of incremental weekly revenue sitting in that gap if sessions stay constant.</div><div class="analyst-item">⚠️ WATCH The BFF+ is the #1 seller at 181 units with only 4.0 weeks of cover (SOH 730) and Pom Pom Thingys sit at 4.1 weeks — both are restock-or-lose-sales risks within the month.</div>
+  <div class="analyst-action">This week: Audit the checkout and PDP for The BFF+ and Pom Pom Thingys this week — confirm no friction points (size OOS messaging, slow load, upsell blocks) that could be suppressing CVR on your fastest-moving lines before stock runs out.</div>
+</div>
+<div class="analyst-persona">
+  <div class="persona-name">Paid Media</div>
+  <div class="analyst-subhead">Working</div><div class="analyst-item">✅ WIN Meta ROAS hit 4.7x vs a 3.0x forecast and 2.7x LY — spend is working significantly harder this year on the same channel.</div><div class="analyst-item">✅ WIN CPA dropped to $33 from $58 LY and is nearly half the $65 forecast, meaning every acquisition dollar is going much further.</div>
+  <div class="analyst-subhead">Needs Attention</div><div class="analyst-item">⚠️ WATCH Spend is up +34.3% YoY ($17,720 vs $13,194) with no Google activity noted — full paid reliance on Meta creates concentration risk if CPMs spike or creative fatigues.</div><div class="analyst-item">⚠️ WATCH New Customer % at 59.4% is below the 65% forecast despite strong ROAS — check whether retargeting or existing-customer segments are consuming a disproportionate share of the Meta budget.</div>
+  <div class="analyst-action">This week: Pull Meta campaign breakdown by audience type this week to confirm new-customer prospecting campaigns are taking the majority of spend — if retargeting is over-indexed, shift budget toward cold audiences to close the gap to the 65% new customer target.</div>
+</div>
+<div class="analyst-persona">
+  <div class="persona-name">Retention &amp; Revenue</div>
+  <div class="analyst-subhead">Working</div><div class="analyst-item">✅ WIN Returning customers are delivering with ATV holding at $156 — the 40.6% returning cohort is punching its weight on basket value.</div><div class="analyst-item">✅ WIN Return rate improved to 5.1% from 6.5% LY on significantly higher volume (760 vs 357 units), suggesting better product-customer fit or improved sizing guidance.</div>
+  <div class="analyst-subhead">Needs Attention</div><div class="analyst-item">⚠️ WATCH New customer mix at 59.4% is below the 65% forecast, meaning the brand is leaning slightly more on existing customers than planned — healthy now, but watch if new acquisition slows.</div><div class="analyst-item">⚠️ WATCH With $87.5K in brand net sales and 563 transactions, revenue remains concentrated in a relatively small order base — a single bad week of traffic or a Meta outage has outsized impact.</div>
+  <div class="analyst-action">This week: Set up a post-purchase email sequence targeting this week's 316 new online customers (59.4% of 535) with a second-purchase incentive — converting even 10% within 30 days at $156 ATV adds ~$5K in retention revenue next month.</div>
+</div>
+  </div>
+</div>
+</div>
+</body>
+</html>
