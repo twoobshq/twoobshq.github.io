@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TWOOBS Weekly Report &mdash; Week ending 1 Nov 2026</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+         background: #F0E0C4; color: #000; padding: 32px 24px; max-width: 1600px; }
+  .logo { width: 100px; height: auto; margin-bottom: 8px; display: block; }
+  .wordmark { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+              margin-bottom: 4px; display: none; }
+  .report-title  { font-size: 26px; font-weight: 700; margin-bottom: 4px; }
+  .report-period { font-size: 13px; color: #666; margin-bottom: 32px; }
+  .page-wrapper { display: grid; grid-template-columns: 1fr 480px; gap: 20px; align-items: start; }
+  .main-content { min-width: 0; }
+  .analyst-sidebar { position: sticky; top: 24px; }
+  .section { background: #fff; border-radius: 8px; padding: 24px; margin-bottom: 16px; }
+  .section-title { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+                   opacity: 0.5; margin-bottom: 16px; }
+  .section-inner { display: grid; grid-template-columns: 1fr 300px; gap: 24px; align-items: start; }
+  .section-data { overflow-x: auto; }
+  .notes-col { }
+  .notes-label { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+                 color: #bbb; margin-bottom: 8px; }
+  .notes-field { min-height: 80px; padding: 10px 12px; background: #fafafa; border: 1px solid #eee;
+                 border-radius: 4px; font-size: 12px; line-height: 1.6; outline: none; cursor: text;
+                 font-family: inherit; word-wrap: break-word; overflow-wrap: break-word; white-space: pre-wrap; }
+  .notes-field:focus { border-color: #D9E300; background: #fff; box-shadow: 0 0 0 2px rgba(217,227,0,0.2); }
+  .notes-field:empty::before { content: "Add notes..."; color: #ccc; pointer-events: none; display: block; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  thead th { font-size: 10px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase;
+             color: #999; text-align: right; padding: 0 10px 10px 10px; border-bottom: 1px solid #eee;
+             white-space: nowrap; }
+  thead th:first-child { text-align: left; min-width: 190px; }
+  tbody td { padding: 9px 10px; text-align: right; border-bottom: 1px solid rgba(0,0,0,0.04);
+             white-space: nowrap; font-variant-numeric: tabular-nums; }
+  tbody td:first-child { text-align: left; color: #333; font-size: 13px; }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:hover { background: rgba(0,0,0,0.015); }
+  .sales-row td { font-weight: 700; background: rgba(217,227,0,0.15); }
+  .pos  { color: #007836; font-weight: 600; }
+  .neg  { color: #FF2E8B; font-weight: 600; }
+  .neut { color: #888; }
+  .manual { color: #bbb; font-style: italic; font-size: 12px; }
+  .visits-input { border: 1px solid #ddd; border-radius: 3px; padding: 2px 6px; font-size: 13px; width: 90px; font-family: inherit; text-align: right; background: #fafafa; }
+  .visits-input:focus { outline: none; border-color: #D9E300; background: #fff; }
+  .visits-input::placeholder { color: #bbb; font-style: italic; }
+  .cover-low { color: #FF2E8B; font-weight: 700; }
+  .cover-mid { color: #FF8040; font-weight: 700; }
+  .cover-ok  { color: #007836; font-weight: 600; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .subsection-label { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+                      color: #aaa; margin-bottom: 12px; }
+  .legend { display: flex; gap: 16px; margin-top: 14px; padding-top: 12px; border-top: 1px solid #eee; }
+  .legend-item { font-size: 11px; display: flex; align-items: center; gap: 5px; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+  .analyst-persona { margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #eee; }
+  .analyst-persona:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .persona-name { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+                  color: #888; margin-bottom: 10px; }
+  .analyst-subhead { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em;
+                     color: #bbb; margin: 10px 0 5px; }
+  .analyst-item { font-size: 12px; line-height: 1.55; margin-bottom: 4px; }
+  .analyst-action { font-size: 12px; font-weight: 600; line-height: 1.5; margin-top: 10px; padding: 8px 10px;
+                    background: rgba(217,227,0,0.2); border-radius: 4px; }
+  @media (max-width: 900px) {
+    .page-wrapper { grid-template-columns: 1fr; }
+    .analyst-sidebar { position: static; }
+    .two-col { grid-template-columns: 1fr; }
+    .section-inner { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wordmark">TWOOBS</div>
+<div class="report-title">Weekly Report</div>
+<div class="report-period">Week ending Sunday 1 Nov 2026 &nbsp;&middot;&nbsp; Mon 26 Oct &ndash; Sun 1 Nov 2026</div>
+<div class="page-wrapper">
+  <div class="main-content">
+    
+<div class="section">
+  <div class="section-title">Total Brand &mdash; Week ending 1 Nov 2026 &nbsp;&middot;&nbsp; LY 27 Oct &ndash; 2 Nov 2025</div>
+  <div class="section-inner">
+    <div class="section-data"><table>
+      <thead><tr>
+  <th></th><th>Actual</th><th>Forecast</th><th>LY</th><th>vs LY</th><th>vs Forecast</th>
+</tr></thead>
+      <tbody>
+        <tr><td>Sales</td><td>$193,881</td><td><span class="neut">$166,000</span></td><td><span class="neut">$112,817</span></td><td><span class="pos">+$81,064 (+72%)</span></td><td><span class="pos">+$27,881 (+17%)</span></td></tr>
+        <tr><td>Transactions</td><td>1,360</td><td><span class="neut">1,186</span></td><td><span class="neut">827</span></td><td><span class="pos">+533 (+64%)</span></td><td><span class="pos">+174 (+15%)</span></td></tr>
+        <tr><td>Units</td><td>1,738</td><td><span class="neut">&mdash;</span></td><td><span class="neut">1,061</span></td><td><span class="pos">+677 (+64%)</span></td><td><span class="neut">&mdash;</span></td></tr>
+        <tr><td>ATV</td><td>$143</td><td><span class="neut">$140</span></td><td><span class="neut">$136</span></td><td><span class="pos">+$6 (+5%)</span></td><td><span class="pos">+$3 (+2%)</span></td></tr>
+        <tr><td>UPT</td><td>1.28</td><td><span class="neut">&mdash;</span></td><td><span class="neut">1.28</span></td><td><span class="neg">-0.01 (-0%)</span></td><td><span class="neut">&mdash;</span></td></tr>
+        <tr><td>Gross Margin</td><td>74.4%</td><td><span class="neut">&mdash;</span></td><td><span class="neut">77.4%</span></td><td><span class="neg">-2.9pp</span></td><td><span class="neut">&mdash;</span></td></tr>
+      </tbody>
+    </table></div>
+    <div class="notes-col"><div class="notes-label">Notes</div><div class="notes-field" contenteditable="true" data-section="brand_lw" spellcheck="false"></div></div>
+  </div>
+</div>
+    
+<div class="section">
+  <div class="section-title">Total Brand &mdash; MTD (1 Nov &ndash; 1 Nov 2026)</div>
+  <div class="section-inner">
+    <div class="section-data"><table>
+      <thead><tr>
+  <th></th><th>Actual</th><th>Forecast</th><th>LY</th><th>vs LY</th><th>vs Forecast</th>
+</tr></thead>
+      <tbody>
+        <tr><td>Sales</td><td>$39,562</td><td><span class="neut">$25,000</span></td><td><span class="neut">$18,067</span></td><td><span class="pos">+$21,495 (+119%)</span></td><td><span class="pos">+$14,562 (+58%)</span></td></tr>
+        <tr><td>Transactions</td><td>238</td><td><span class="neut">179</span></td><td><span class="neut">129</span></td><td><span class="pos">+109 (+84%)</span></td><td><span class="pos">+59 (+33%)</span></td></tr>
+        <tr><td>Units</td><td>296</td><td><span class="neut">&mdash;</span></td><td><span class="neut">163</span></td><td><span class="pos">+133 (+82%)</span></td><td><span class="neut">&mdash;</span></td></tr>
+      </tbody>
+    </table></div>
+    <div class="notes-col"><div class="notes-label">Notes</div><div class="notes-field" contenteditable="true" data-section="brand_mtd" spellcheck="false"></div></div>
+  </div>
+</div>
+    
+<div class="section">
+  <div class="section-title">Online &mdash; Week ending 1 Nov 2026 &nbsp;&middot;&nbsp; LY 27 Oct &ndash; 2 Nov 2025</div>
+  <div class="section-inner">
+    <div class="section-data"><table>
+      <thead><tr>
+  <th></th><th>Actual</th><th>Forecast</th><th>LY</th><th>vs LY</th><th>vs Forecast</th>
+</tr></thead>
+      <tbody>
+        <tr><td>Sales</td><td>$181,069</td><td><span class="neut">$158,124</span></td><td><span class="neut">$105,619</span></td><td><span class="pos">+$75,450 (+71%)</span></td><td><span class="pos">+$22,945 (+15%)</span></td></tr>
+        <tr><td>Traffic</td><td>64,459</td><td><span class="neut">37,649</span></td><td><span class="neut">28,793</span></td><td><span class="pos">+35,666 (+124%)</span></td><td><span class="pos">+26,810 (+71%)</span></td></tr>
+        <tr><td>CVR</td><td>2.0%</td><td><span class="neut">3.0%</span></td><td><span class="neut">2.7%</span></td><td><span class="neg">-0.7pp</span></td><td><span class="neg">-1.0pp</span></td></tr>
+        <tr><td>Orders</td><td>1,272</td><td><span class="neut">1,129</span></td><td><span class="neut">775</span></td><td><span class="pos">+497 (+64%)</span></td><td><span class="pos">+143 (+13%)</span></td></tr>
+        <tr><td>ATV</td><td>$142</td><td><span class="neut">$140</span></td><td><span class="neut">$136</span></td><td><span class="pos">+$6 (+4%)</span></td><td><span class="pos">+$2 (+2%)</span></td></tr>
+        <tr><td>New Customer %</td><td>70.5%</td><td><span class="neut">65%</span></td><td><span class="neut">46.6%</span></td><td><span class="pos">+23.9pp</span></td><td><span class="pos">+5.5pp</span></td></tr>
+        <tr><td>ROAS</td><td>4.1&times;</td><td><span class="neut">3.0&times;</span></td><td><span class="neut">2.4&times;</span></td><td><span class="pos">+1.6&times;</span></td><td><span class="pos">+1.1&times;</span></td></tr>
+        <tr><td>CPA</td><td>$35</td><td><span class="neut">$65</span></td><td><span class="neut">$56</span></td><td><span class="neg">$-21 (-37%)</span></td><td><span class="neg">$-30 (-46%)</span></td></tr>
+      </tbody>
+    </table></div>
+    <div class="notes-col"><div class="notes-label">Notes</div><div class="notes-field" contenteditable="true" data-section="online_lw" spellcheck="false"></div></div>
+  </div>
+</div>
+    
+<div class="section">
+  <div class="section-title">Retail Store &mdash; Week ending 1 Nov 2026 &nbsp;&middot;&nbsp; LY 27 Oct &ndash; 2 Nov 2025</div>
+  <div class="section-inner">
+    <div class="section-data"><table>
+      <thead><tr>
+  <th></th><th>Actual</th><th>Forecast</th><th>LY</th><th>vs LY</th><th>vs Forecast</th>
+</tr></thead>
+      <tbody>
+        <tr><td>Sales</td><td>$12,812</td><td><span class="neut">$7,876</span></td><td><span class="neut">$7,198</span></td><td><span class="pos">+$5,615 (+78%)</span></td><td><span class="pos">+$4,936 (+63%)</span></td></tr>
+        <tr>
+          <td>Visits</td>
+          <td><input type="number" id="store-visits" data-txns="86"
+               placeholder="enter visits" min="0" class="visits-input"></td>
+          <td><span class="neut">&mdash;</span></td>
+          <td><input type="number" id="store-visits-ly" data-txns="52"
+               placeholder="enter visits" min="0" class="visits-input"></td>
+          <td><span class="neut">&mdash;</span></td>
+          <td><span class="neut">&mdash;</span></td>
+        </tr>
+        <tr><td>Transactions</td><td>86</td><td><span class="neut">&mdash;</span></td><td><span class="neut">52</span></td><td><span class="pos">+34 (+65%)</span></td><td><span class="neut">&mdash;</span></td></tr>
+        <tr>
+          <td>CVR</td>
+          <td id="store-cvr"><span class="neut">&mdash;</span></td>
+          <td><span class="neut">&mdash;</span></td>
+          <td id="store-cvr-ly"><span class="neut">&mdash;</span></td>
+          <td id="store-cvr-vs-ly"><span class="neut">&mdash;</span></td>
+          <td><span class="neut">&mdash;</span></td>
+        </tr>
+        <tr><td>Units</td><td>98</td><td><span class="neut">&mdash;</span></td><td><span class="neut">61</span></td><td><span class="pos">+37 (+61%)</span></td><td><span class="neut">&mdash;</span></td></tr>
+        <tr><td>ATV</td><td>$149</td><td><span class="neut">&mdash;</span></td><td><span class="neut">$138</span></td><td><span class="pos">+$11 (+8%)</span></td><td><span class="neut">&mdash;</span></td></tr>
+        <tr><td>UPT</td><td>1.14</td><td><span class="neut">&mdash;</span></td><td><span class="neut">1.17</span></td><td><span class="neg">-0.03 (-3%)</span></td><td><span class="neut">&mdash;</span></td></tr>
+      </tbody>
+    </table></div>
+    <div class="notes-col"><div class="notes-label">Notes</div><div class="notes-field" contenteditable="true" data-section="store_lw" spellcheck="false"></div></div>
+  </div>
+</div>
+    
+<div class="section">
+  <div class="section-title">Returns &amp; Refunds</div>
+  <div class="section-inner">
+    <div class="section-data">
+      <div class="two-col">
+        <div>
+          <div class="subsection-label">Last Week</div>
+          <table>
+          <thead><tr>
+  <th></th><th>Actual</th><th>LY</th><th>vs LY</th>
+</tr></thead>
+          <tbody>
+            <tr><td>Units</td><td>108</td><td><span class="neut">30</span></td><td><span class="pos">+78 (+260%)</span></td></tr>
+            <tr><td>Value</td><td>$14,075</td><td><span class="neut">$4,285</span></td><td><span class="pos">+$9,790 (+228%)</span></td></tr>
+            <tr><td>Return Rate</td><td>6.3%</td><td><span class="neut">3.5%</span></td><td><span class="pos">+2.7pp</span></td></tr>
+          </tbody>
+        </table>
+        </div>
+        <div>
+          <div class="subsection-label">Month to Date</div>
+          <table>
+          <thead><tr>
+  <th></th><th>Actual</th><th>LY</th><th>vs LY</th>
+</tr></thead>
+          <tbody>
+            <tr><td>Units</td><td>0</td><td><span class="neut">1</span></td><td><span class="neg">-1 (-100%)</span></td></tr>
+            <tr><td>Value</td><td>$0</td><td><span class="neut">$169</span></td><td><span class="neg">$-169 (-100%)</span></td></tr>
+            <tr><td>Return Rate</td><td>0.0%</td><td><span class="neut">0.9%</span></td><td><span class="neg">-0.9pp</span></td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+    </div>
+    <div class="notes-col"><div class="notes-label">Notes</div><div class="notes-field" contenteditable="true" data-section="returns" spellcheck="false"></div></div>
+  </div>
+</div>
+    
+<div class="section">
+  <div class="section-title">Stock Report &mdash; by Product</div>
+  <div class="section-inner">
+    <div class="section-data">
+      <table>
+        <thead><tr>
+          <th>Product</th><th>SOH</th><th>Sold LW</th><th>Sold LY</th>
+          <th>Wks Cover</th><th>Unit %</th><th>$ %</th>
+        </tr></thead>
+        <tbody><tr><td>The BFF+</td><td>4,512</td><td>632</td><td><span class="neut">0</span></td><td><span class="cover-mid">7.1</span></td><td>36.4%</td><td>41.9%</td></tr><tr><td>The BFF</td><td>6,462</td><td>451</td><td><span class="neut">349</span></td><td><span class="cover-ok">14.3</span></td><td>25.9%</td><td>23.9%</td></tr><tr><td>The OG+</td><td>3,293</td><td>148</td><td><span class="neut">136</span></td><td><span class="cover-ok">22.2</span></td><td>8.5%</td><td>10.8%</td></tr><tr><td>The Seeker</td><td>1,145</td><td>132</td><td><span class="neut">0</span></td><td><span class="cover-ok">8.7</span></td><td>7.6%</td><td>9.4%</td></tr><tr><td>The OG</td><td>3,061</td><td>113</td><td><span class="neut">161</span></td><td><span class="cover-ok">27.1</span></td><td>6.5%</td><td>7.0%</td></tr><tr><td>Protecty Stuff</td><td>4,291</td><td>77</td><td><span class="neut">60</span></td><td><span class="cover-ok">55.7</span></td><td>4.4%</td><td>0.7%</td></tr><tr><td>Blooper Booper</td><td>1,590</td><td>46</td><td><span class="neut">9</span></td><td><span class="cover-ok">34.6</span></td><td>2.6%</td><td>0.3%</td></tr><tr><td>Good Socks</td><td>374</td><td>30</td><td><span class="neut">8</span></td><td><span class="cover-ok">12.5</span></td><td>1.7%</td><td>0.4%</td></tr><tr><td>The Sneaky Jane</td><td>2,148</td><td>28</td><td><span class="neut">72</span></td><td><span class="cover-ok">76.7</span></td><td>1.6%</td><td>2.4%</td></tr><tr><td>Pom Pom Thingys</td><td>448</td><td>26</td><td><span class="neut">79</span></td><td><span class="cover-ok">17.2</span></td><td>1.5%</td><td>0.5%</td></tr><tr><td>Thingys</td><td>281</td><td>26</td><td><span class="neut">30</span></td><td><span class="cover-ok">10.8</span></td><td>1.5%</td><td>0.3%</td></tr><tr><td>The Gift of TWOOBS</td><td>1,864</td><td>10</td><td><span class="neut">1</span></td><td><span class="cover-ok">186.4</span></td><td>0.6%</td><td>0.5%</td></tr><tr><td>Rosy Thingys</td><td>114</td><td>9</td><td><span class="neut">0</span></td><td><span class="cover-ok">12.7</span></td><td>0.5%</td><td>0.1%</td></tr><tr><td>Bungee Thingys</td><td>33</td><td>3</td><td><span class="neut">0</span></td><td><span class="cover-ok">11.0</span></td><td>0.2%</td><td>0.1%</td></tr><tr><td>Fancy Thingys</td><td>0</td><td>2</td><td><span class="neut">15</span></td><td><span class="cover-low">0.0</span></td><td>0.1%</td><td>0.0%</td></tr><tr><td>Good Toe Socks</td><td>19</td><td>1</td><td><span class="neut">0</span></td><td><span class="cover-ok">19.0</span></td><td>0.1%</td><td>0.0%</td></tr><tr><td>the og kids</td><td>52</td><td>1</td><td><span class="neut">0</span></td><td><span class="cover-ok">52.0</span></td><td>0.1%</td><td>0.0%</td></tr><tr><td>Conscious Convos</td><td>214</td><td>0</td><td><span class="neut">1</span></td><td>&mdash;</td><td>0.0%</td><td>0.0%</td></tr><tr><td>Hanti Choker</td><td>0</td><td>0</td><td><span class="neut">0</span></td><td>&mdash;</td><td>0.0%</td><td>0.0%</td></tr><tr><td>Hanti Sunlace</td><td>1</td><td>0</td><td><span class="neut">0</span></td><td>&mdash;</td><td>0.0%</td><td>0.0%</td></tr><tr><td>Rose Choker</td><td>13</td><td>0</td><td><span class="neut">0</span></td><td>&mdash;</td><td>0.0%</td><td>0.0%</td></tr><tr><td>Rose Sunlace</td><td>24</td><td>0</td><td><span class="neut">0</span></td><td>&mdash;</td><td>0.0%</td><td>0.0%</td></tr><tr><td>The BAE</td><td>0</td><td>0</td><td><span class="neut">5</span></td><td>&mdash;</td><td>0.0%</td><td>0.0%</td></tr><tr><td>The Keybee-Jeebee</td><td>301</td><td>0</td><td><span class="neut">0</span></td><td>&mdash;</td><td>0.0%</td><td>0.0%</td></tr><tr><td>Collaboration - Cungelella</td><td>27</td><td>0</td><td><span class="neut">0</span></td><td>&mdash;</td><td>0.0%</td><td>0.0%</td></tr><tr><td>thingys kids</td><td>1</td><td>0</td><td><span class="neut">0</span></td><td>&mdash;</td><td>0.0%</td><td>0.0%</td></tr><tr><td>This Candle Smells Like My Feet</td><td>138</td><td>0</td><td><span class="neut">0</span></td><td>&mdash;</td><td>0.0%</td><td>0.0%</td></tr></tbody>
+      </table>
+      <div class="legend">
+        <div class="legend-item"><span class="dot" style="background:#FF2E8B"></span> Under 4 wks &mdash; urgent</div>
+        <div class="legend-item"><span class="dot" style="background:#FF8040"></span> 4&ndash;8 wks &mdash; watch</div>
+        <div class="legend-item"><span class="dot" style="background:#007836"></span> 8+ wks &mdash; healthy</div>
+      </div>
+    </div>
+    <div class="notes-col"><div class="notes-label">Notes</div><div class="notes-field" contenteditable="true" data-section="stock" spellcheck="false"></div></div>
+  </div>
+</div>
+  </div>
+  
+<div class="analyst-sidebar">
+  <div class="section">
+    <div class="section-title">Analyst Notes</div>
+    
+<div class="analyst-persona">
+  <div class="persona-name">Ecommerce &amp; Conversion</div>
+  <div class="analyst-subhead">Working</div><div class="analyst-item">Paid social is pulling a lot of weight, accounting for 50% of all sessions and helping drive online sales to $181,069 — up 71.4% on last year — while store sales also grew strongly to $12,812, up 78%.</div><div class="analyst-item">Average order value of $142 is tracking just above forecast at $140, and new customer acquisition at 70.5% is beating the 65% forecast, suggesting the current campaign creative is reaching genuinely new audiences.</div>
+  <div class="analyst-subhead">Needs Attention</div><div class="analyst-item">Conversion rate has dropped to 1.97% against a 3.0% forecast and last year's 2.69%, which is the clearest pressure point given sessions more than doubled but orders did not keep pace — worth checking whether landing page experience or product page load times are creating friction for the high volume of paid social visitors.</div><div class="analyst-item">The return rate has jumped significantly to 6.3% (108 units, $14,075) compared to 3.5% and just 30 units last year, so it is worth understanding which products or sizes are being returned most before this erodes net revenue further.</div>
+  <div class="analyst-action">This week: Pull a returns report by product and size this week to identify whether The BFF+ or The Seeker — both new or relaunched styles — are driving the spike in returns, and flag any sizing or expectation issues to address in product copy.</div>
+</div>
+<div class="analyst-persona">
+  <div class="persona-name">Paid Media</div>
+  <div class="analyst-subhead">Working</div><div class="analyst-item">Overall paid media efficiency is well ahead of target — return on ad spend of 4.1x beats the 3.0x forecast and cost per order of $35 is well under the $65 forecast, meaning the team is getting strong results from a spend level only marginally above last year ($44,579 vs $43,444).</div><div class="analyst-item">The shift of budget toward Google — spending $7,998 this week versus only $2,120 last year — appears to be working, with the BFF and BFF+ Shopping campaigns alongside PMAX collectively driving efficient prospecting volume.</div>
+  <div class="analyst-subhead">Needs Attention</div><div class="analyst-item">Meta spend dropped to $36,581 from $41,324 last year, and while overall efficiency looks good, the heavy reliance on paid social for 50% of all site sessions means any creative fatigue or auction pressure on Meta could quickly affect overall traffic and conversion rate.</div><div class="analyst-item">The Bottom of Funnel Search campaign ($358 spend) and Branded Search ($620) are relatively small allocations — given conversion rate is under target, it is worth checking whether retargeting and branded capture is strong enough to convert the large volume of paid social visitors who did not buy on their first visit.</div>
+  <div class="analyst-action">This week: Review Meta creative frequency and audience overlap this week to check for fatigue, and consider reallocating a small portion of budget toward retargeting to help convert the large pool of recent non-purchasing visitors.</div>
+</div>
+<div class="analyst-persona">
+  <div class="persona-name">Retention &amp; Revenue</div>
+  <div class="analyst-subhead">Working</div><div class="analyst-item">Email is contributing 3% of sessions (2,081 visits), which is a modest but steady owned-channel contribution on top of the paid-heavy traffic mix, and average order value continues to trend above last year at $142 versus $136.</div><div class="analyst-item">Returning customers at 29.5% of orders are transacting at a solid rate given the strong new customer acquisition push, suggesting the existing customer base remains engaged alongside the influx of new buyers.</div>
+  <div class="analyst-subhead">Needs Attention</div><div class="analyst-item">Email's share of traffic is low relative to the volume of new customers being acquired — with 70.5% of orders this week coming from new customers, there is a significant opportunity to activate welcome and post-purchase flows to convert these buyers into repeat customers before they go cold.</div><div class="analyst-item">Good Socks and Protecty Stuff are showing healthy unit growth versus last year, but with only 12.5 weeks of sock cover remaining, a targeted email to existing customers about bundling accessories with footwear could drive attach rate before stock tightens.</div>
+  <div class="analyst-action">This week: Audit the welcome flow this week to confirm new customers acquired during this high-traffic period are receiving a strong post-purchase sequence, and check that the second email in the flow includes a product recommendation relevant to their first purchase.</div>
+</div>
+  </div>
+</div>
+</div>
+<script>
+(function(){
+  var SUPA_URL = 'https://brnnihstwcmswmzgwrbk.supabase.co';
+  var SUPA_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJybm5paHN0d2Ntc3dtemd3cmJrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc1Mzk0NjAsImV4cCI6MjA5MzExNTQ2MH0.FTpAtc7iv_r95NRpQfJhMpzoBcN6NIWRhxdikCWCbV8';
+  var WEEK_END = '2026-11-01';
+  if (!SUPA_URL || !SUPA_KEY) { return; }
+  var HDR = {'apikey': SUPA_KEY, 'Authorization': 'Bearer ' + SUPA_KEY, 'Content-Type': 'application/json'};
+
+  var storeVisitsEl   = document.getElementById('store-visits');
+  var storeVisitsLyEl = document.getElementById('store-visits-ly');
+  var storeCvrEl      = document.getElementById('store-cvr');
+  var storeCvrLyEl    = document.getElementById('store-cvr-ly');
+  var storeCvrVsLyEl  = document.getElementById('store-cvr-vs-ly');
+
+  function calcStoreCVR() {
+    var v  = storeVisitsEl   ? parseInt(storeVisitsEl.value,   10) : NaN;
+    var vl = storeVisitsLyEl ? parseInt(storeVisitsLyEl.value, 10) : NaN;
+    var t  = storeVisitsEl   ? parseInt(storeVisitsEl.dataset.txns,   10) : NaN;
+    var tl = storeVisitsLyEl ? parseInt(storeVisitsLyEl.dataset.txns, 10) : NaN;
+    var cvr   = (v  > 0) ? t  / v  * 100 : NaN;
+    var cvrLy = (vl > 0) ? tl / vl * 100 : NaN;
+    if (storeCvrEl)    storeCvrEl.textContent    = !isNaN(cvr)   ? cvr.toFixed(1)   + '%' : '—';
+    if (storeCvrLyEl)  storeCvrLyEl.textContent  = !isNaN(cvrLy) ? cvrLy.toFixed(1) + '%' : '—';
+    if (storeCvrVsLyEl) {
+      if (!isNaN(cvr) && !isNaN(cvrLy) && cvrLy !== 0) {
+        var diff = ((cvr - cvrLy) / cvrLy * 100);
+        var sign = diff >= 0 ? '+' : '';
+        storeCvrVsLyEl.textContent = sign + diff.toFixed(1) + '%';
+        storeCvrVsLyEl.style.color = diff >= 0 ? '#007836' : '#FF2E8B';
+      } else {
+        storeCvrVsLyEl.innerHTML = '<span class="neut">—</span>';
+      }
+    }
+  }
+
+  fetch(SUPA_URL + '/rest/v1/weekly_report_notes?week_end=eq.' + WEEK_END + '&select=section_id,content', {headers: HDR})
+    .then(function(r) {
+      if (!r.ok) { console.error('[notes] load failed:', r.status, r.statusText); return []; }
+      return r.json();
+    })
+    .then(function(rows) {
+      console.log('[notes] loaded', rows.length, 'rows for', WEEK_END);
+      rows.forEach(function(row) {
+        if (row.section_id === 'store_visits') {
+          if (storeVisitsEl && row.content) { storeVisitsEl.value = row.content; calcStoreCVR(); }
+        } else if (row.section_id === 'store_visits_ly') {
+          if (storeVisitsLyEl && row.content) { storeVisitsLyEl.value = row.content; calcStoreCVR(); }
+        } else {
+          var el = document.querySelector('[data-section="' + row.section_id + '"]');
+          if (el && row.content) { el.innerHTML = row.content; }
+        }
+      });
+    })
+    .catch(function(err) { console.error('[notes] load error:', err); });
+
+  var timers = {};
+
+  document.querySelectorAll('.notes-field').forEach(function(el) {
+    el.addEventListener('input', function() {
+      var sid = el.dataset.section;
+      clearTimeout(timers[sid]);
+      timers[sid] = setTimeout(function() {
+        fetch(SUPA_URL + '/rest/v1/weekly_report_notes', {
+          method: 'POST',
+          headers: Object.assign({}, HDR, {'Prefer': 'resolution=merge-duplicates'}),
+          body: JSON.stringify({week_end: WEEK_END, section_id: sid, content: el.innerHTML})
+        })
+        .then(function(r) {
+          if (!r.ok) { console.error('[notes] save failed:', r.status, r.statusText); }
+          else { console.log('[notes] saved', sid); }
+        })
+        .catch(function(err) { console.error('[notes] save error:', err); });
+      }, 800);
+    });
+  });
+
+  function saveVisits(el, sid) {
+    el.addEventListener('input', function() {
+      calcStoreCVR();
+      clearTimeout(timers[sid]);
+      timers[sid] = setTimeout(function() {
+        fetch(SUPA_URL + '/rest/v1/weekly_report_notes', {
+          method: 'POST',
+          headers: Object.assign({}, HDR, {'Prefer': 'resolution=merge-duplicates'}),
+          body: JSON.stringify({week_end: WEEK_END, section_id: sid, content: el.value})
+        });
+      }, 800);
+    });
+  }
+  if (storeVisitsEl)   saveVisits(storeVisitsEl,   'store_visits');
+  if (storeVisitsLyEl) saveVisits(storeVisitsLyEl, 'store_visits_ly');
+})();
+</script>
+</body>
+</html>
